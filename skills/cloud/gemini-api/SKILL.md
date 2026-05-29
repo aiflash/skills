@@ -1,6 +1,6 @@
 ---
 name: gemini-api
-description: Guides the usage of the Gemini API on Agent Platform with the Google Gen AI SDK. Use when the user asks about using Gemini in an enterprise environment or explicitly mentions Vertex AI, Google Cloud, or Agent Platform. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like multimodal inputs, tools, media generation, caching, batch prediction, and Live API.
+description: Use when the user asks about using Gemini in an enterprise environment or explicitly mentions Vertex AI, Google Cloud, or Agent Platform. Guides the usage of the Gemini API on Agent Platform with the Google Gen AI SDK. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like multimodal inputs, tools, media generation, caching, batch prediction, and Live API.
 compatibility: Requires active Google Cloud credentials and Agent Platform API enabled.
 ---
 
@@ -98,8 +98,7 @@ client = genai.Client(
 
 ## Models
 
-- Use `gemini-3.1-pro-preview` for complex reasoning, coding, research (1M tokens)
-  - IMPORTANT: Do not use `gemini-3-pro-preview`
+- Use `gemini-3.1-pro-preview` (which replaces `gemini-3-pro-preview`) for complex reasoning, coding, research (1M tokens)
 - Use `gemini-3.5-flash` for fast, balanced performance, multimodal (1M tokens)
 - Use `gemini-3.1-flash-lite` for high-frequency, lightweight tasks (1M tokens)
 - Use `gemini-3-pro-image` (aka Nano Banana Pro) for high-quality image generation and editing
@@ -134,7 +133,7 @@ print(response.text)
 ### TypeScript/JavaScript
 ```typescript
 import { GoogleGenAI } from "@google/genai";
-const ai = new GoogleGenAI({ vertexai: { project: "your-project-id", location: "global" } });
+const ai = new GoogleGenAI({ enterprise: { project: "your-project-id", location: "global" } });
 const response = await ai.models.generateContent({
     model: "gemini-3.5-flash",
     contents: "Explain quantum computing"
@@ -180,7 +179,7 @@ import com.google.genai.types.GenerateContentResponse;
 
 public class GenerateTextFromTextInput {
   public static void main(String[] args) {
-    Client client = Client.builder().vertexAi(true).project("your-project-id").location("global").build();
+    Client client = Client.builder().enterprise(true).project("your-project-id").location("global").build();
     GenerateContentResponse response =
         client.models.generateContent(
             "gemini-3.5-flash",
@@ -199,7 +198,7 @@ using Google.GenAI;
 var client = new Client(
     project: "your-project-id",
     location: "global",
-    vertexAI: true
+    enterprise: true
 );
 
 var response = await client.Models.GenerateContent(
@@ -213,7 +212,7 @@ Console.WriteLine(response.Text);
 ## API spec & Documentation (source of truth)
 
 When implementing or debugging API integration for Agent Platform, refer to the official Agent Platform documentation:
-- **Agent Platform Documentation**: https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview
+- **Agent Platform Documentation**: https://docs.cloud.google.com/gemini-enterprise-agent-platform/overview.md.txt
 - **REST API Reference**: https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/rest
 
 The Gen AI SDK on Agent Platform uses the `v1beta1` or `v1` REST API endpoints (e.g., `https://{LOCATION}-aiplatform.googleapis.com/v1beta1/projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}:generateContent`).
