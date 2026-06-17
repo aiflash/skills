@@ -26,6 +26,19 @@ the Agent Platform GenAI Evaluation SDK (`google.genai` / `agentplatform`).
 -   Analyzing rubric verdicts, loss patterns, and clustering failures.
 -   Suggesting concrete code/prompt improvements based on eval results.
 
+## Safety & Confirmation Tiers (CRITICAL)
+
+Before executing any commands or scripts on behalf of the user, you MUST adhere
+to the following safety tiers based on the action requested:
+
+1.  **Tier R**: Read-only (`inspect_results.py`, `compare_results.py`, `validate_dataset.py`, `parse_adk_traces.py`, `render_html_report.py`)
+    *   **Rule**: No confirmation needed. You may execute these helper scripts immediately to inspect data, validate schemas, parse traces, or compare evaluation results.
+2.  **Tier M: Read-only with Compute Costs (`client.evals.run_inference`, `client.evals.evaluate`, `client.evals.generate_user_scenarios`, `client.evals.generate_loss_clusters`)**
+    *   **Rule**: These operations invoke LLMs or remote evaluation services
+    that consume compute resources and incur costs. This requires
+    **interactive confirmation** with 'Yes'/'No' options. Once granted once,
+    you do not have to prompt for future evaluation.
+
 ## Setup
 
 Install the SDK:
