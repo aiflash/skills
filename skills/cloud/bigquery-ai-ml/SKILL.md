@@ -5,14 +5,14 @@ metadata:
 description: >-
   Leverages BigQuery's built-in machine learning and GenAI capabilities
   for advanced data analytics. Use when you need to write SQL queries
-  that perform time-series forecasting, detect outliers, or leverage generative AI capabilities in BigQuery.
+  that perform time-series forecasting, detect outliers, find key drivers, or leverage generative AI capabilities in BigQuery.
 ---
 
 # BigQuery AI & ML
 
 BigQuery integrates with Vertex AI to provide powerful machine learning and
 generative AI capabilities directly within SQL queries using built-in functions
-like `AI.FORECAST`, `AI.DETECT_ANOMALIES`, and `AI.GENERATE`.
+like `AI.FORECAST`, `AI.KEY_DRIVERS`, `AI.DETECT_ANOMALIES`, and `AI.GENERATE`.
 
 ## Reference Directory
 
@@ -24,6 +24,9 @@ like `AI.FORECAST`, `AI.DETECT_ANOMALIES`, and `AI.GENERATE`.
 
 -   [AI Generate](references/ai_generate.md): General-purpose text and
     content generation using Gemini models.
+
+-   [AI Key Drivers](references/ai_key_drivers.md): Automatically identify
+    dimensional segments most responsible for driving changes in a metric.
 
 ## Related Skills
 
