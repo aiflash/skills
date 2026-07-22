@@ -74,10 +74,10 @@ repo to install.
 - **Developer tools**
   -   [**gcloud CLI Skill for AI Agents**](./skills/cloud/gcloud)
   -   [**Google Agents CLI Onboarding**](./skills/cloud/google-agents-cli-onboarding)
-- **Management tools**
-  -   [**GKE Cost Optimization**](./skills/cloud/gke-cost)
-  -   [**GKE Observability**](./skills/cloud/gke-observability)
-  -   [**Workload Manager Basics**](./skills/cloud/workload-manager-basics)
+-   **Management tools**
+    -   [**GKE Cost Optimization**](./skills/cloud/gke-cost-optimization)
+    -   [**GKE Observability**](./skills/cloud/gke-observability)
+    -   [**Workload Manager Basics**](./skills/cloud/workload-manager-basics)
 - **Well-Architected Framework**
   -   [**Google Cloud Well-Architected Framework skill for the Cost Optimization pillar**](./skills/cloud/google-cloud-waf-cost-optimization)
   -   [**Google Cloud Well-Architected Framework skill for the Operational Excellence pillar**](./skills/cloud/google-cloud-waf-operational-excellence)
