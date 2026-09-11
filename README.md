@@ -145,6 +145,7 @@ repo to install.
   - [**Privileged Access Manager (PAM)**](./skills/cloud/iam-helper-for-privileged-access-management)
   - [**SecOps Detection Coverage Skill**](./skills/cloud/detection-engineering-coverage-evaluation)
 - **Web and app hosting**
+  - [**Cloud Run Alert Configuration**](./skills/cloud/cloud-run-alert-configuration)
   - [**Cloud Run Basics**](./skills/cloud/cloud-run-basics)
   - [**Firebase Basics**](./skills/cloud/firebase-basics)
 - **Advertising**
